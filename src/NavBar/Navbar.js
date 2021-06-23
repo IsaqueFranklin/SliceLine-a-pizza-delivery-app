@@ -12,6 +12,7 @@ const Logo = styled(Title)`
     font-size: 20px;
     color: white;
     text-shadow: 1px 1px 4px #380502;
+    width: 100%;
 `
 
 export function Navbar(){
