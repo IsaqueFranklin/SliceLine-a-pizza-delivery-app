@@ -21,11 +21,17 @@ export const Food = styled(Title)`
     background-position: center;
     background-repeat: no repeat;
     background-size: cover;
-    filter: contrast(90%);
+    filter: contrast(85%);
     border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px grey;
+    margin-top: 5px;
+    transition-property: box-shadow margin-top filter;
+    transition-duration: .1s;
+    box-shadow: 0px 0px 2px 0px grey;
     &:hover {
-      cursor: pointer;
-      opacity: 0.7;  
+      cursor: pointer; 
+      filter: contrast(100%);
+      margin-top: 0px;
+      margin-bottom: 5px;
+      box-shadow: 0px 5px 10px 0px grey;
     }
 `
