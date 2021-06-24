@@ -1,34 +1,50 @@
-export const foods = [
+export const FoodItems = [
     {
         name: 'Cheese Pizza',
-        img: '/img/cheese.jpg'
+        img: '/img/cheese.jpg',
+        section: 'pizza'
     },
     {
         name: 'Mini Pizza',
-        img: '/img/minipizza.jpg'
+        img: '/img/minipizza.jpg',
+        section: 'pizza'
     },
     {
         name: 'Family Pizza',
-        img: '/img/family.jpg'
+        img: '/img/family.jpg',
+        section: 'pizza'
     },
     {
         name: 'Rucula Pizza',
-        img: '/img/rucula.jpg'
+        img: '/img/rucula.jpg',
+        section: 'pizza'
     },
     {
         name: 'Pizza Slices',
-        img: '/img/slices.jpg'
+        img: '/img/slices.jpg',
+        section: 'pizza'
     },
     {
         name: 'Italian Pizza',
-        img: '/img/italian.jpg'
+        img: '/img/italian.jpg',
+        section: 'pizza'
     },
     {
         name: 'Roman Pizza',
-        img: '/img/roman.jpg'
+        img: '/img/roman.jpg',
+        section: 'pizza'
     },
     {
         name: 'Special Pizza',
-        img: '/img/special.jpg'
+        img: '/img/special.jpg',
+        section: 'pizza'
     }
-]
+];
+
+export const foods = FoodItems.reduce((res, food) => {
+    if(!res[food.section]){
+        res[food.section] = []
+    }
+    res[food.section].push(food)
+    return res;
+}, {});
